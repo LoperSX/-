@@ -1,0 +1,444 @@
+body {
+    background-color: #12e192;
+
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    color: #f1fffa;
+
+    overflow-y: hidden;
+}
+
+.MenuCube {
+    transition: 0.25s;
+    container-type: size;
+
+    background-color: #f1fffa;
+
+    max-width: 400px;
+    width: 75vw;
+    max-height: 500px;
+    height: 100vw;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    border-radius: 50px;
+
+    display: grid;
+    gap: 20px;
+    align-content: start;
+    justify-items: center;
+
+    overflow-y:scroll;
+    scrollbar-width:none;
+
+    padding-block: 20px;
+
+}
+
+.DataFrame {
+    transition: 0.2s;
+    container-type: size;
+
+    background-color: #12e192;
+    width: 80cqw;
+    height: 37cqh;
+    
+    border-radius: 30px;
+    border: 5px solid #09b171;
+    box-shadow: 0px 5px 0 #09b171;
+
+    display: grid;
+    place-items: center;
+    place-content: center;
+}
+
+.DataFrame > * {
+    grid-area: 1 / 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    text-align: center;
+    width: max-content;
+    justify-self: center;
+    max-width: 100%;
+}
+
+.BackgroundCube1 {
+    background-color: #09b171;
+
+    width: 37cqw;
+    height: 19cqh;
+
+    transform: translate(28cqw, 10cqh);
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BackgroundCube2 {
+    background-color: #09b171;
+
+    width: 37cqw;
+    height: 19cqh;
+
+    transform: translate(-28cqw, 10cqh);
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BackgroundCube3 {
+    background-color: #09b171;
+
+    width: 37cqw;
+    height: 19cqh;
+
+    transform: translate(-28cqw, -19cqh);
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BackgroundCube4 {
+    background-color: #09b171;
+
+    width: 37cqw;
+    height: 19cqh;
+
+    transform: translate(28cqw, -19cqh);
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DateCreate {
+    font-size: 4.5cqw;
+}
+
+.TodayEnter {
+    font-size: 4.5cqw;
+}
+
+.TodayClock {
+    font-size: 5cqw;
+}
+
+.CreateClock {
+    font-size: 5cqw;
+}
+
+.CreateText {
+    text-align: center;
+    font-size: 6cqw;
+
+    transform: translate(-28cqw, -37cqh);
+}
+
+.TodayText {
+    text-align: center;
+    font-size: 6cqw;
+
+    transform: translate(28cqw, -37cqh);
+}
+
+.EnterFrame {
+    background-color: #09b171;
+    width: 30cqw;
+    height: 28cqh;
+    border-radius: 15px 15px 0px 0px;
+
+    transform: translate(0%,36cqh);
+}
+
+.EnterText {
+    text-align: center;
+
+    font-size: 6cqw;
+}
+
+.Type {
+    text-align: center;
+
+    font-size: 6cqw;
+
+    transform: translate(30cqw, 37cqh);
+
+    /* width: 28cqw;
+    height: 20cqh; */
+}
+
+.Points {
+    text-align: center;
+
+    font-size: 6cqw;
+
+    transform: translate(-30cqw, 37cqh);
+}
+
+.Add {
+    transition: 0.25s;
+    z-index: 1;
+
+    background-color: #12e192;
+
+    max-width: 150px;
+    width: 75vw;
+    max-height: 60px;
+    height: 50vw;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transform: translate(0,300%);
+
+    border-radius: 20px;
+    border: 5px solid #09b171;
+    box-shadow: 0px 5px 0 #09b171;
+}
+
+.TextAdd {
+    text-align: center;
+
+    font-size: 30px;
+
+    position: relative;
+    top: -25%;
+}
+
+.BoxSelecting {
+    background-color: #f1fffa;
+
+    max-width: 400px;
+    width: 75vw;
+    max-height: 500px;
+    height: 100vw;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    border-radius: 50px;
+
+    display: grid;
+    gap: 20px;
+    align-content: start;
+    justify-items: center;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    padding-block: 20px;
+}
+
+.Box {
+    transition: 0.5s;
+
+    background-color: #12e192;
+
+    width: 80%;
+    height: 80px;
+    border-radius: 30px;
+
+    border: 5px solid #09b171;
+    box-shadow: 0px 5px 0 #09b171;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    container-type: inline-size;
+}
+
+.TextBox {
+    text-align: center;
+    
+}
+
+.Circle {
+    transition: 0.4s;
+    z-index: 2;
+
+    background-color: #d80b4c;
+
+    width: 175px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    box-shadow: 0px 15px 0px #920532;
+}
+
+.CircleDown {
+    transition: 0.4s;
+
+    background-color: #4e4e4e;
+
+    width: 190px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    transform: translate(0%,20%);
+    box-shadow: 0px 15px 0px #434343;
+}
+
+.Score {
+    transition: 0.4s;
+    
+    font-size: 70px;
+
+    position: fixed;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.TypeText {
+    transition: 0.4s;
+
+    font-size: 50px;
+    width: 10ch;
+    white-space: normal;
+    direction: rtl;
+    text-align: center;
+
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ExitCube {
+    transition: 0.2s;
+
+    z-index: 1;
+    background-color: #d80b4c;
+
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 15px;
+}
+
+.BoxAccept {
+    transition: 0.5s;
+    z-index: 99;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 7px 0 rgba(0, 0, 0, 0.6);
+
+    width: 250px;
+    height: 150px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 25px;
+}
+
+.AcceptButton {
+    transition: 0.5s;
+    z-index: 99;
+
+    background-color: #12e192;
+    box-shadow: 0px 3px 0 #09b171;
+
+    border: 5px solid #09b171;
+
+    width: 100px;
+    height: 50px;
+
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 15px;
+}
+
+.AcceptText {
+    transition: 0.4s;
+
+    font-size: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    container-type: inline-size;
+
+    position: relative;
+    top: -50%;
+}
+
+.CancelButton {
+    transition: 0.5s;
+    z-index: 99;
+
+    background-color: #e11265;
+    box-shadow: 0px 3px 0 #b1094c;
+
+    border: 5px solid #b1094c;
+
+    width: 100px;
+    height: 50px;
+
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 15px;
+}
+
+.CancelText {
+    transition: 0.4s;
+
+    font-size: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    container-type: inline-size;
+
+    position: relative;
+    top: -50%;
+}
+
+.TextInfoForBoxAccept {
+
+    font-size: 30px;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
