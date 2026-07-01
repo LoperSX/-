@@ -117,7 +117,7 @@ setTimeout(function() {
 
             for (i in On.Datas) {
                 let FrameTemple = On.FrameTemple;
-                let DataIndex = On.Data[indexFrames];
+                let DataIndex = On.Datas[i];
                 MenuCube.insertAdjacentHTML("beforeend", FrameTemple);
                 let NewFrame = MenuCube.lastElementChild;
 
