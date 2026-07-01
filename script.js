@@ -23,7 +23,7 @@ let Clicked = false;
 let IsWindowOpen = false;
 let Wait = false;
 
-let URL = "https://stunning-goldfish-g49vg765w674hpvq-3501.app.github.dev";
+let URL = "https://backend-8wpx.onrender.com";
 
 let Link = `${URL}/Dictionary`;
 let Link2 = `${URL}/FrameTemple`;
