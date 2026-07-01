@@ -169,6 +169,11 @@ function DownAll() {
     CancelButton.style.zIndex = ZINDEXs[13];
     CancelText.style.zIndex = ZINDEXs[14];
 }
+let Back = ZINDEXs;
+ZINDEXs[0] = 12
+ZINDEXs[1] = 11
+DownAll();
+ZINDEXs = Back;
 
 function FrameDown() {
     document.querySelectorAll(".DataFrame").forEach(function(Frame) {
