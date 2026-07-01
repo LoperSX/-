@@ -130,7 +130,9 @@ async function GetDataPlayer() {
                 NewFrame.querySelector(".TodayEnter").textContent = DataIndex.TodayEnter;
                 NewFrame.querySelector(".TodayClock").textContent = DataIndex.TodayClock;
                 NewFrame.querySelector(".CreateClock").textContent = DataIndex.CreateClock;
-
+                NewFrame.querySelector(".Type").textContent = DataIndex.Word;
+                NewFrame.querySelector(".Points").textContent = DataIndex.Score;
+                
                 NewFrame.setAttribute("id", i);
                 NewFrame.setAttribute("DataAllow", "true")
                 indexFrames ++;
