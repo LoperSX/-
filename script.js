@@ -106,14 +106,19 @@ setTimeout(function() {
             body: JSON.stringify({ id: localStorage.getItem("Player") })
         })
     } else {
-        async function GetDataPlayer() {
-            let DataDictionary = await fetch(Link7, {
-                method: "POST",
-                headers: { "Content-Type": "application/json"},
-                body: JSON.stringify({id: localStorage.getItem("Player")})
-            })
+async function GetDataPlayer() {
+    let DataDictionary = await fetch(Link7, {
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify({id: localStorage.getItem("Player")})
+    })
 
-            let On = await DataDictionary.json();
+    if (!DataDictionary.ok) {
+        console.log("Player not found, skipping data load");
+        return;
+    }
+
+    let On = await DataDictionary.json();
 
             for (i in On.Datas) {
                 let FrameTemple = On.FrameTemple;
